@@ -14,8 +14,8 @@
 # YEAR-MONTH-DAY.[file_extension]
 # i.e 2010-01-23.png
 #
-# This first version of the script only searches
-# for .jpg, .png, and .mov files, but other file
+# This script currentely searches for
+# for .jpg, .png, .mov, and .mp4 files, but other file
 # types can be supported by adding them to the list
 # on line 38
 
