@@ -35,7 +35,7 @@ do
 	echo -e "\nSorting through $DIR photos and videos"
 
   # For each extension search through and mv the files into their new directory
-  for ext in jpg png mov
+  for ext in jpg png mov mp4
   do
       if [ $(ls $DIR*.$ext 2> /dev/null | wc -l) -ne 0 ]
       then
