@@ -25,21 +25,25 @@ Sorting through 2010 photos and videos
 No .jpg files to sort for 2010
 No .png files to sort for 2010
 No .mov files to sort for 2010
+No .mp4 files to sort for 2010
 
 Sorting through 2011 photos and videos
       177 .jpg files sorted for 2011
        23 .png files sorted for 2011
        11 .mov files sorted for 2011
+	   2 .mp4 files sorted for 2011
 
 Sorting through 2012 photos and videos
        13 .jpg files sorted for 2012
         2 .png files sorted for 2012
         2 .mov files sorted for 2012
+		3 .mp4 files sorted for 2012
 
 Sorting through 2013 photos and videos
       201 .jpg files sorted for 2013
        22 .png files sorted for 2013
         6 .mov files sorted for 2013
+		4 .mp4 files sorted for 2013
         
 Sorting completed
 
@@ -62,7 +66,7 @@ i.e 2010-01-23.jpg
 
 As long as the file name begins with the year you would like the photo sorted by, and ends in a supported extension, the script should work.
 
-By default .jpg, .png, and .mov files are supported, however it is easy to extend the code to allow for more file types.
+By default .jpg, .png, .mov, and .mp4 files are supported, however it is easy to extend the code to allow for more file types.
 Just add the file types you would like supported to [line 38 of the script](https://github.com/jcordeiro/Sort-Dropbox-Camera-Upload/blob/master/sortphotos.sh#L38).
 
 Similarly, it is also easy to add support for years prior to 2010. Just create the directory in your Camera Uploads folder and add the year you would like supported to [line 32 of the script](https://github.com/jcordeiro/Sort-Dropbox-Camera-Upload/blob/master/sortphotos.sh#L32).
