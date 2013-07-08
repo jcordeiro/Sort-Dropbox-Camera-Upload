@@ -15,7 +15,7 @@
 # i.e 2010-01-23.png
 #
 # This script currentely searches for
-# for .jpg, .png, .mov, and .mp4 files, but other file
+# .jpg, .png, .mov, and .mp4 files, but other file
 # types can be supported by adding them to the list
 # on line 38
 
