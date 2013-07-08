@@ -31,7 +31,7 @@ Sorting through 2011 photos and videos
       177 .jpg files sorted for 2011
        23 .png files sorted for 2011
        11 .mov files sorted for 2011
-	   2 .mp4 files sorted for 2011
+	    2 .mp4 files sorted for 2011
 
 Sorting through 2012 photos and videos
        13 .jpg files sorted for 2012
