@@ -9,7 +9,7 @@
 # based on the year they were taken
 #
 # As of right now, this script only works with
-# pictures taken by iPhones because it is 
+# pictures taken by iPhones and Androids because it is 
 # dependent on their naming conventions of
 # YEAR-MONTH-DAY.[file_extension]
 # i.e 2010-01-23.png
@@ -25,6 +25,7 @@ mkdir 2010 2> /dev/null
 mkdir 2011 2> /dev/null
 mkdir 2012 2> /dev/null
 mkdir 2013 2> /dev/null
+mkdir 2014 2> /dev/null
 
 
 # Move photos and videos into correct folders
