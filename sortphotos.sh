@@ -29,7 +29,7 @@ mkdir 2013 2> /dev/null
 
 # Move photos and videos into correct folders
 
-for DIR in 2010 2011 2012 2013
+for DIR in 2010 2011 2012 2013 2014
 do
 
 	echo -e "\nSorting through $DIR photos and videos"
