@@ -17,7 +17,7 @@
 # This script currentely searches for
 # .jpg, .png, .mov, and .mp4 files, but other file
 # types can be supported by adding them to the list
-# on line 38
+# on line 39
 
 # Make directories, supress warnings if they already exist
 
