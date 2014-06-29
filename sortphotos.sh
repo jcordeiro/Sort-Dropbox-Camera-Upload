@@ -19,18 +19,27 @@
 # types can be supported by adding them to the list
 # on line 39
 
+# Accept start year as first argument, go through the current year
+
+START_YEAR=$1
+CURRENT_YEAR=$(date +"%Y")
+
+# default to 2010 if no start year argument given
+
+[ -z $1 ] && START_YEAR=2010
+
+echo -e "start year: $START_YEAR current year: $CURRENT_YEAR"
+
 # Make directories, supress warnings if they already exist
 
-mkdir 2010 2> /dev/null
-mkdir 2011 2> /dev/null
-mkdir 2012 2> /dev/null
-mkdir 2013 2> /dev/null
-mkdir 2014 2> /dev/null
-
+for DIR in $(seq $START_YEAR $CURRENT_YEAR)
+do
+  mkdir $DIR 2> /dev/null
+done
 
 # Move photos and videos into correct folders
 
-for DIR in 2010 2011 2012 2013 2014
+for DIR in $(seq $START_YEAR $CURRENT_YEAR)
 do
 
 	echo -e "\nSorting through $DIR photos and videos"
