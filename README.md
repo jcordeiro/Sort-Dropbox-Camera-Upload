@@ -49,6 +49,8 @@ Sorting completed
 
 ```
 
+You can also optionally pass a starting year as the first argument of the script. For example, `./sortphotos.sh 2007` will start with photos from 2007 and go through the current year.
+
 ### The Result ###
 
 Your pictures and videos are sorted into directories based on the year you took them!
