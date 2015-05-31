@@ -15,9 +15,9 @@
 # i.e 2010-01-23.png
 #
 # This script currently searches for
-# .jpg, .png, .mov, and .mp4 files, but other file
+# .jpg, .png, .mov, .gif, and .mp4 files, but other file
 # types can be supported by adding them to the list
-# on line 45
+# on line 41
 
 # Accept start year as first argument, go through the current year
 
