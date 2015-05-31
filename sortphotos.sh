@@ -15,9 +15,9 @@
 # i.e 2010-01-23.png
 #
 # This script currently searches for
-# .jpg, .png, .mov, and .mp4 files, but other file
+# .jpg, .png, .mov, .gif, and .mp4 files, but other file
 # types can be supported by adding them to the list
-# on line 45
+# on line 41
 
 # Accept start year as first argument, go through the current year
 
@@ -29,25 +29,28 @@ CURRENT_YEAR=$(date +"%Y")
 
 echo -e "start year: $START_YEAR current year: $CURRENT_YEAR"
 
-# Make directories, supress warnings if they already exist
-for DIR in $(seq $START_YEAR $CURRENT_YEAR)
-do
-  mkdir $DIR 2> /dev/null
-done
-
 # Move photos and videos into correct folders
 for DIR in $(seq $START_YEAR $CURRENT_YEAR)
 do
 
+  mkdir -p $DIR
+
 	echo -e "\nSorting through $DIR photos and videos"
 
   # For each extension search through and mv the files into their new directory
-  for ext in jpg png mov mp4
+  for ext in jpg png mov mp4 gif
   do
       if [ $(ls $DIR*.$ext 2> /dev/null | wc -l) -ne 0 ]
       then
          echo " $(ls $DIR*.$ext 2> /dev/null | wc -l) .$ext files sorted for $DIR"
          mv $DIR*.$ext $DIR 2> /dev/null
+
+         # Sort files by month as well. These files are named YYYY-MM...
+         for MONTH in $(seq -w 12)
+         do
+           mkdir -p $DIR/$MONTH
+           mv $DIR/$DIR-$MONTH*.$ext $DIR/$MONTH 2> /dev/null
+         done
       else
          echo "No .$ext files to sort for $DIR"
       fi
