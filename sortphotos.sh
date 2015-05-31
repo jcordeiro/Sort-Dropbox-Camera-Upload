@@ -30,21 +30,12 @@ CURRENT_YEAR=$(date +"%Y")
 
 echo -e "start year: $START_YEAR current year: $CURRENT_YEAR"
 
-# Make directories, supress warnings if they already exist
-
-for DIR in $(seq $START_YEAR $CURRENT_YEAR)
-do
-  mkdir $DIR 2> /dev/null
-  for MONTH in $(seq -w 12)
-  do
-    mkdir $DIR/$MONTH 2> /dev/null
-  done
-done
-
 # Move photos and videos into correct folders
 
 for DIR in $(seq $START_YEAR $CURRENT_YEAR)
 do
+
+  mkdir -p $DIR
 
 	echo -e "\nSorting through $DIR photos and videos"
 
@@ -59,6 +50,7 @@ do
          # Sort files by month as well. These files are named YYYY-MM...
          for MONTH in $(seq -w 12)
          do
+           mkdir -p $DIR/$MONTH
            mv $DIR/$DIR-$MONTH*.$ext $DIR/$MONTH 2> /dev/null
          done
       else
