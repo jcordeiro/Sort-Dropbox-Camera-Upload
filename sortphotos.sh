@@ -35,6 +35,10 @@ echo -e "start year: $START_YEAR current year: $CURRENT_YEAR"
 for DIR in $(seq $START_YEAR $CURRENT_YEAR)
 do
   mkdir $DIR 2> /dev/null
+  for MONTH in $(seq -w 12)
+  do
+    mkdir $DIR/$MONTH 2> /dev/null
+  done
 done
 
 # Move photos and videos into correct folders
@@ -51,6 +55,12 @@ do
       then
          echo " $(ls $DIR*.$ext 2> /dev/null | wc -l) .$ext files sorted for $DIR"
          mv $DIR*.$ext $DIR 2> /dev/null
+
+         # Sort files by month as well. These files are named YYYY-MM...
+         for MONTH in $(seq -w 12)
+         do
+           mv $DIR/$DIR-$MONTH*.$ext $DIR/$MONTH 2> /dev/null
+         done
       else
          echo "No .$ext files to sort for $DIR"
       fi 
